@@ -1,0 +1,17 @@
+.header {
+    
+    height:80px;
+    background-color:#f76b8a; 
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.hover_link:hover {
+    background-color: #eaf6f6; 
+    border-radius: 4px;
+}
+.hover_link_login:hover{
+    background-color: #66bfbf; ; 
+    border-radius: 4px;
+}

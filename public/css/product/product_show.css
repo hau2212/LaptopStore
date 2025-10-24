@@ -1,0 +1,27 @@
+.product_show {
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;         /* cố định vùng nội dung */
+    top: 100px;               /* trừ phần navbar cao 60px */
+    left: 250px;             /* trừ phần sidebar rộng 250px */
+    right: 0;                /* chạm mép phải màn hình */
+    bottom: 0;               /* chạm mép dưới màn hình */
+    
+    background-color: #f8f9fa; /* màu nền nhẹ */
+    border: 3px solid #f76b8a;  /* viền xanh, rõ nét */
+    border-radius: 4px;          /* bỏ bo góc nếu muốn full khung */
+    padding: 20px;
+    box-sizing: border-box;    /* để viền và padding không làm lệch kích thước */
+    overflow: auto;      
+    overflow-y: auto;   /* cuộn nếu nội dung dài */   
+}
+.content_product {
+    border: 2px solid #66bfbf;
+    border-radius: 4px;
+    height: 30px;
+    width: 100%;
+}
+.img_card{
+    height: 100%;
+}

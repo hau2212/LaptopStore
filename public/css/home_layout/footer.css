@@ -1,0 +1,13 @@
+.footer{
+    z-index: 2; 
+    height: 30vh;
+    background-color: #66bfbf;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.generic{
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
