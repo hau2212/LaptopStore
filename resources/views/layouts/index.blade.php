@@ -76,14 +76,8 @@
                 <!-- Sidebar -->
                     <!-- Sidebar cố định bên trái, full chiều cao -->
                         <nav id="sidebarMenu" 
-                            class="col-md-3 col-lg-2 d-md-block  sidebar p-3 border-end"
-                            style="
-                                position: fixed; /* luôn cố định bên trái */
-                                top: 0;           /* bắt đầu từ đầu màn hình */
-                                left: 0;          /* dính sát trái */
-                                    /* chiều cao bằng 100% chiều cao màn hình */
-                                overflow-y: auto; /* nếu menu dài quá, sẽ có scroll riêng */
-                            ">
+                            class="col-md-3 col-lg-2 d-md-block  sidebar p-3 border-end">
+                       
                             <!-- Tiêu đề menu -->
                             <h5 class="text-dark mb-3"><i class="fa-solid fa-bars me-2"></i>Menu</h5>
 
