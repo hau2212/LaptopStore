@@ -29,8 +29,7 @@
     <nav class="navbar navbar-expand-lg  sticky-top shadow-sm custom_navbar header">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ Route('home') }}">
-                <img src="{{ asset('img/laptop.png') }}" alt="Logo" height="35" class="me-2">
-                <span>My Website</span>
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" height="55" class="me-2">
             </a>
 
                 <div> 
@@ -50,18 +49,29 @@
             </button>
 
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ Route('home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/shop') }}">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/blog') }}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/contact') }}">Contact</a></li>
-                </ul>
-
-                <ul class="navbar-nav ms-lg-3">
+               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link hover_link_login" href="{{ url('/login') }}">
-                            <i class="fa-solid fa-user me-1 "></i> Login
-                        </a>
+                        <a class="nav-link hover_link {{ request()->routeIs('home') ? 'active' : '' }}"
+                        href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover_link {{ request()->is('shop*') ? 'active' : '' }}"
+                        href="{{ url('/shop') }}">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover_link {{ request()->is('blog*') ? 'active' : '' }}"
+                        href="{{ url('/blog') }}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover_link {{ request()->is('contact*') ? 'active' : '' }}"
+                        href="{{ url('/contact') }}">Contact</a>
+                    </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link hover_link_login {{ request()->is('login') ? 'active' : '' }}"
+                        href="{{ url('/login') }}"><i class="fa-solid fa-user me-1"></i> Login</a>
                     </li>
                 </ul>
             </div>

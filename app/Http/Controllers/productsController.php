@@ -13,5 +13,6 @@ class productsController extends Controller
         $viewData['footer'] = "© 2024 LaptopShop. All rights reserved.";
         $viewData['products'] = Product::findOrFail($id);
         return view('products.show') ->with("viewData", $viewData);
+        
     }
 }
