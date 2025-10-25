@@ -18,12 +18,19 @@
 
                         <h4><strong> {{$viewData['products']->name }}</strong></h4>
                         <p class="description_product"> Description: {{$viewData['products']->description }} </p>
-                        <p class="price_product"> Price: {{$viewData['products']->price }} VNĐ </p>
-                        <p class="discount_product"> Discount Price: {{$viewData['products']->discount_price }} VNĐ </p>
-                        <p class="stock_product"> Stock: {{$viewData['products']->stock }} </p>
-                        <p class="category_product"> Category: {{$viewData['products']->category }} </p>
-                        <p 
-
+                        <div class="price_origin">
+                            <p > Price: {{$viewData['products']->price }} VNĐ </p>
+                        </div>
+                        <div class="price_discount">
+                            <p > Discount Price: {{$viewData['products']->discount_price }} VNĐ </p>
+                        </div>
+                        <div class='stock_product'>
+                            <p > Stock: {{$viewData['products']->stock }} </p>
+                        </div>
+                        
+                        <div class="status_product">
+                            <p  > Status: {{$viewData['products']->status }} </p>
+                        </div>
 
                     </div>
                 </div>
