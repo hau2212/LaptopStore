@@ -10,7 +10,7 @@
             <div class='container_product'>
                 <!-- Product Image -->
                 <div class=left_product>
-                    <img class=img_product src="{{ asset('storage/' . $viewData['products']->image) }}" alt="{{ $viewData['products']->name }}" width="300">     
+                    <img class=img_product src="{{ asset('storage' . $viewData['products']->image) }}" alt="{{ $viewData['products']->name }}" width="300">     
                 </div>
                 <!-- Product Info -->
                 <div class=right_product>

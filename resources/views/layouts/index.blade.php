@@ -54,17 +54,14 @@
                         <a class="nav-link hover_link {{ request()->routeIs('home') ? 'active' : '' }}"
                         href="{{ route('home') }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link hover_link {{ request()->is('shop*') ? 'active' : '' }}"
-                        href="{{ url('/shop') }}">Shop</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link hover_link {{ request()->is('blog*') ? 'active' : '' }}"
-                        href="{{ url('/blog') }}">Blog</a>
+                        href="{{ route('home.about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link hover_link {{ request()->is('contact*') ? 'active' : '' }}"
-                        href="{{ url('/contact') }}">Contact</a>
+                        href="{{ route('home.contact') }}">Contact</a>
                     </li>
                     </ul>
 
@@ -80,6 +77,7 @@
 
     <!-- ===== MAIN CONTENT ===== -->
      <!-- ===== MAIN CONTENT WITH SIDEBAR ===== -->
+     @yield('sidebar')
     <main class="flex-grow-1 py-4">
         <div class="container-fluid">
             <div class="row">
