@@ -16,7 +16,7 @@
                 <div class="alert alert-success">{{ session('success') }}</div>
             @endif
 
-            <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -54,11 +54,13 @@
                         <label for="category_id" class="form-label">Danh mục</label>
                         <select name="category_id" id="category_id" class="form-select">
                             <option value="">-- Chọn danh mục --</option>
-                            @foreach($category->id as $category)
-                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+
+                            @foreach($viewData['category'] as $category)
+                                <option value="{{ $category -> id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
                                     {{ $category->name }}
                                 </option>
                             @endforeach
+
                         </select>
                         @error('category_id') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
@@ -105,7 +107,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($products as $index => $product)
+                    @foreach($viewData['product'] as $index => $product)
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $product->name }}</td>
@@ -123,7 +125,7 @@
                             @endif
                         </td>
                         <td>
-                            <form action="{{ route('admin.products.delete', $product->id) }}" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa?');">
+                            <form action="{{ route('admin.product.delete', $product->id) }}" method="POST" onsubmit="return confirm('Bạn có chắc muốn xóa?');">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-sm btn-danger">Xóa</button>

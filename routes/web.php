@@ -13,6 +13,12 @@ Route::post('/contact/submit' , 'App\Http\Controllers\ContactController@submitFo
 Route::get('/show/{id}' , 'App\Http\Controllers\productsController@show')->name('product.show');   
 
 
-Route::get('/admin' , 'App\Http\Controllers\admin\AdminController@index')->name('admin');
-Route::get('/admin/product/store' , 'App\Http\Controllers\admin\AdminController@store')->name('admin.store');
+Route::get('/admin' , 'App\Http\Controllers\admin\AdminController@index')->name('admin.dashbroad');
+Route::get('/admin/products' , 'App\Http\Controllers\admin\AdminController@createProducts')->name('admin.products');
+Route::post('/admin/product/store' , 'App\Http\Controllers\admin\AdminController@store')->name('admin.product.store');
+Route::delete('/admin/product/delete/{id}' , 'App\Http\Controllers\admin\AdminController@delete')->name('admin.product.delete');
+Route::get('/admin/product/edit/{id}', 'App\Http\Controllers\admin\AdminController@edit')->name('admin.product.edit');
+Route::put('/admin/product/update/{id}', 'App\Http\Controllers\admin\AdminController@update')->name('admin.product.update');
+
+require __DIR__.'/auth.php';
 ?>
