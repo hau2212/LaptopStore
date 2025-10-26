@@ -2,11 +2,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    {{-- Meta cơ bản --}}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {{-- CSRF cho form/AJAX --}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Admin Dashboard')</title>
 
     {{-- Bootstrap + Icons (giữ nguyên UI) --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -23,31 +23,20 @@
 </head>
 
 <body>
-    <div class="row g-0">
-        <!-- sidebar -->
-        <div class="p-3 col fixed text-white bg-dark">
-            {{-- Logo/brand hoặc link về trang admin --}}
-            <a href="{{ route('admin') }}" class="text-white text-decoration-none">
-                <span class="fs-4">Admin Panel</span>
-            </a>
-            <hr />
-            {{-- Menu điều hướng (dùng route name để đúng URL) --}}
-            <ul class="nav flex-column">
-                <li>
-                    <a href="{{ route('admin') }}" class="nav-link text-white">
-                        - Admin - Home
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('product.admin') }}" class="nav-link text-white">
-                        - Admin - Products
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('home') }}" class="mt-2 btn bg-primary text-white">
-                        Go back to the homepage
-                    </a>
-                </li>
+    <div class="admin-wrapper">
+
+        {{-- Sidebar --}}
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>ADMIN PANEL</h2>
+            </div>
+
+            <ul class="admin-menu">
+                <li><a href="{{ route('admin.products') }}">📊 Dashboard</a></li>
+                <li><a href="{{ route('admin.product.store') }}">👤 Users</a></li>
+                <li><a href="{{ route('admin.products') }}">🛒 Products</a></li>
+                <li><a href="{{ route('admin.product.store') }}">📦 Orders</a></li>
+                <li><a href="{{ route('admin.product.store') }}">🚪 Logout</a></li>
             </ul>
         </div>
         <!-- /sidebar -->
