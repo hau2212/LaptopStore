@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class productsController extends Controller
 {
+     public function index()
+    {
+    $viewData = [];
+    $viewData["title"] = "Products -Online Store";
+    $viewData["subtitle"] = "List of products";
+    $viewData["products"] = Product::all();
+    return view('products.index')->with("viewData", $viewData);
+    }
     public function show($id){
         $viewData= [];
         $viewData['title'] = "Product Details" ;
