@@ -11,4 +11,8 @@ Route::get('/contact' , 'App\Http\Controllers\ContactController@index')->name('h
 Route::post('/contact/submit' , 'App\Http\Controllers\ContactController@submitForm')->name('contact.submit');
 
 Route::get('/show/{id}' , 'App\Http\Controllers\productsController@show')->name('product.show');   
+
+
+Route::get('/admin' , 'App\Http\Controllers\admin\AdminController@index')->name('admin');
+Route::get('/admin/product/store' , 'App\Http\Controllers\admin\AdminController@store')->name('admin.store');
 ?>
