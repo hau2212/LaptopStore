@@ -63,7 +63,7 @@
             <a class="nav-link hover_link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hover_link {{ request()->is('shop*') ? 'active' : '' }}" href="{{ url('/shop') }}">Shop</a>
+            <a class="nav-link hover_link {{ request()->is('shop*') ? 'active' : '' }}" href="{{ route('product.index') }}">Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link hover_link {{ request()->is('blog*') ? 'active' : '' }}" href="{{ url('/blog') }}">Blog</a>
