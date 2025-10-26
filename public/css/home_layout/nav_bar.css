@@ -7,9 +7,9 @@
     height: 80%;        /* chiếm toàn bộ chiều cao màn hình */
     overflow-y: auto;       /* nếu menu dài, scroll xuất hiện */
      overflow-x: visible; /* cho phép submenu tràn ra ngoài */
-    background-color:#eaf6f6; ; /* nền sáng */
+    background-color:#f7fafa; ; /* nền sáng */
     padding: 1rem;          /* khoảng cách trong menu */
-    border-right: 1px solid #cc93fe; /* viền phải */
+    border-right: 1px solid #a32727; /* viền phải */
     border-radius: 4px; /* bo góc */
     z-index: 1; 
     margin-left: 10px;
@@ -23,13 +23,13 @@
 
 /* Mục menu */
 #sidebarMenu .nav-link {
-    color: #212529;
+    color: #000000;
     margin-bottom: 0.5rem;
     position: relative; /* để submenu định vị theo item cha */
 }
 
 #sidebarMenu .nav-link:hover {
-    background-color: #2cea59;
+    background-color: #2cea585d;
     border-radius: 4px;
 }
 

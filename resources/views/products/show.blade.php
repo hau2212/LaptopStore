@@ -10,7 +10,7 @@
             <div class='container_product'>
                 <!-- Product Image -->
                 <div class=left_product>
-                    <img class=img_product src="{{ asset('storage/' . $viewData['products']->image) }}" alt="{{ $viewData['products']->name }}" width="300">     
+                    <img class=img_product src="{{ asset('storage' . $viewData['products']->image) }}" alt="{{ $viewData['products']->name }}" width="300">     
                 </div>
                 <!-- Product Info -->
                 <div class=right_product>
@@ -21,9 +21,11 @@
                         <div class="price_origin">
                             <p > Price: {{$viewData['products']->price }} VNĐ </p>
                         </div>
+
                         <div class="price_discount">
                             <p > Discount Price: {{$viewData['products']->discount_price }} VNĐ </p>
                         </div>
+                        
                         <div class='stock_product'>
                             <p > Stock: {{$viewData['products']->stock }} </p>
                         </div>

@@ -29,8 +29,7 @@
     <nav class="navbar navbar-expand-lg  sticky-top shadow-sm custom_navbar header">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ Route('home') }}">
-                <img src="{{ asset('img/laptop.png') }}" alt="Logo" height="35" class="me-2">
-                <span>My Website</span>
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" height="55" class="me-2">
             </a>
 
                 <div> 
@@ -50,18 +49,26 @@
             </button>
 
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ Route('home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/shop') }}">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/blog') }}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link hover_link" href="{{ url('/contact') }}">Contact</a></li>
-                </ul>
-
-                <ul class="navbar-nav ms-lg-3">
+               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link hover_link_login" href="{{ url('/login') }}">
-                            <i class="fa-solid fa-user me-1 "></i> Login
-                        </a>
+                        <a class="nav-link hover_link {{ request()->routeIs('home') ? 'active' : '' }}"
+                        href="{{ route('home') }}">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link hover_link {{ request()->is('blog*') ? 'active' : '' }}"
+                        href="{{ route('home.about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover_link {{ request()->is('contact*') ? 'active' : '' }}"
+                        href="{{ route('home.contact') }}">Contact</a>
+                    </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link hover_link_login {{ request()->is('login') ? 'active' : '' }}"
+                        href="{{ url('/login') }}"><i class="fa-solid fa-user me-1"></i> Login</a>
                     </li>
                 </ul>
             </div>
@@ -70,20 +77,15 @@
 
     <!-- ===== MAIN CONTENT ===== -->
      <!-- ===== MAIN CONTENT WITH SIDEBAR ===== -->
+     @yield('sidebar')
     <main class="flex-grow-1 py-4">
         <div class="container-fluid">
             <div class="row">
                 <!-- Sidebar -->
                     <!-- Sidebar cố định bên trái, full chiều cao -->
                         <nav id="sidebarMenu" 
-                            class="col-md-3 col-lg-2 d-md-block  sidebar p-3 border-end"
-                            style="
-                                position: fixed; /* luôn cố định bên trái */
-                                top: 0;           /* bắt đầu từ đầu màn hình */
-                                left: 0;          /* dính sát trái */
-                                    /* chiều cao bằng 100% chiều cao màn hình */
-                                overflow-y: auto; /* nếu menu dài quá, sẽ có scroll riêng */
-                            ">
+                            class="col-md-3 col-lg-2 d-md-block  sidebar p-3 border-end">
+                       
                             <!-- Tiêu đề menu -->
                             <h5 class="text-dark mb-3"><i class="fa-solid fa-bars me-2"></i>Menu</h5>
 
