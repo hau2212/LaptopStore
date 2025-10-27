@@ -16,6 +16,9 @@ class homeController extends Controller
         $viewData['products'] = Product::all();
         return view('home.main') ->with("viewData", $viewData);
     }
+
+
+    
     public function about(){
         $viewData= [];
         $viewData['title'] = "About Us" ;

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('index');
 // });
+
+
 Route::get('/home' , 'App\Http\Controllers\homeController@index')->name('home');
 Route::get('/about' , 'App\Http\Controllers\homeController@about')->name('home.about');
 Route::get('/contact' , 'App\Http\Controllers\ContactController@index')->name('home.contact');

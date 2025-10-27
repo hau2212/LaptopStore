@@ -70,6 +70,21 @@
                         <a class="nav-link hover_link_login {{ request()->is('login') ? 'active' : '' }}"
                         href="{{ url('/login') }}"><i class="fa-solid fa-user me-1"></i> Login</a>
                     </li>
+
+
+                    <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link hover_link_login {{ request()->is('login') ? 'active' : '' }}"
+                        href="{{ url('/login') }}"><i class="fa-solid fa-user me-1"></i> register</a>
+                              </li>
+                    @guest
+                      
+                    @else
+
+                    @endguest
+
+
+
                 </ul>
             </div>
         </div>
@@ -147,7 +162,7 @@
                             text-center : canh giữa toàn bộ nội dung
     
                         -->
-                        <img src="{{ asset('img/laptop.png') }}" alt="Logo" height="40" class="mb-2 d-block mx-md-0 mx-auto">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo" height="40" class="mb-2 d-block mx-md-0 mx-auto">
                         <h3 class="generic"> LaptopShop</h3>
                         <p class="generic">Your one-stop shop for all laptop needs.</p>
                         <p class="mb-0">
