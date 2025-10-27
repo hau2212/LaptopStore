@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     {{-- CSS tuỳ biến (đảm bảo đúng asset path) --}}
+    <link href="{{ asset('css/admin/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
 
     {{-- Tiêu đề có thể override từ view con --}}
@@ -32,13 +33,13 @@
             </div>
 
             <ul class="admin-menu">
-                <li><a href="{{ route('admin.products') }}">📊 Dashboard</a></li>
+                <li><a href="{{ route('admin.dashbroad') }}">📊 Dashboard</a></li>
                 <li><a href="{{ route('admin.product.store') }}">👤 Users</a></li>
                 <li><a href="{{ route('admin.products') }}">🛒 Products</a></li>
                 <li><a href="{{ route('admin.product.store') }}">📦 Orders</a></li>
                 <li><a href="{{ route('admin.product.store') }}">🚪 Logout</a></li>
             </ul>
-        </div>
+        </aside>
         <!-- /sidebar -->
 
         {{-- Khu vực nội dung chính --}}

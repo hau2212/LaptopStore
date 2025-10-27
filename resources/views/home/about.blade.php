@@ -92,8 +92,4 @@
 </div>
  </div>
 @endsection
-<<<<<<< HEAD
-
-=======
->>>>>>> Khang
 @section('footer' , $viewData['footer'])

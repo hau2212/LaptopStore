@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Admin Dashboard - Products')
-
+@section('styles')
+    <link href="{{ asset('public/css/admin/product/product_show.css') }}" rel="stylesheet" />
+@endsection
 @section('content')
 <div class="container mt-4">
 
